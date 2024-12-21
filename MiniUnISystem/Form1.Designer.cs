@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            adminRB = new RadioButton();
-            studentRB = new RadioButton();
             teacherRB = new RadioButton();
-            label1 = new Label();
-            label2 = new Label();
-            idTB = new TextBox();
+            studentRB = new RadioButton();
+            adminRB = new RadioButton();
+            groupBox2 = new GroupBox();
             textBox2 = new TextBox();
+            emailTB = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             label3 = new Label();
             button1 = new Button();
             groupBox1.SuspendLayout();
@@ -55,29 +55,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Login as";
             // 
-            // groupBox2
+            // teacherRB
             // 
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(idTB);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(327, 134);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(400, 165);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Login";
-            // 
-            // adminRB
-            // 
-            adminRB.AutoSize = true;
-            adminRB.Location = new Point(19, 42);
-            adminRB.Name = "adminRB";
-            adminRB.Size = new Size(90, 29);
-            adminRB.TabIndex = 0;
-            adminRB.TabStop = true;
-            adminRB.Text = "Admin";
-            adminRB.UseVisualStyleBackColor = true;
+            teacherRB.AutoSize = true;
+            teacherRB.Location = new Point(19, 77);
+            teacherRB.Name = "teacherRB";
+            teacherRB.Size = new Size(95, 29);
+            teacherRB.TabIndex = 3;
+            teacherRB.TabStop = true;
+            teacherRB.Text = "Teacher";
+            teacherRB.UseVisualStyleBackColor = true;
             // 
             // studentRB
             // 
@@ -90,25 +77,43 @@
             studentRB.Text = "Student";
             studentRB.UseVisualStyleBackColor = true;
             // 
-            // teacherRB
+            // adminRB
             // 
-            teacherRB.AutoSize = true;
-            teacherRB.Location = new Point(19, 77);
-            teacherRB.Name = "teacherRB";
-            teacherRB.Size = new Size(95, 29);
-            teacherRB.TabIndex = 3;
-            teacherRB.TabStop = true;
-            teacherRB.Text = "Teacher";
-            teacherRB.UseVisualStyleBackColor = true;
+            adminRB.AutoSize = true;
+            adminRB.Location = new Point(19, 42);
+            adminRB.Name = "adminRB";
+            adminRB.Size = new Size(90, 29);
+            adminRB.TabIndex = 0;
+            adminRB.TabStop = true;
+            adminRB.Text = "Admin";
+            adminRB.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // groupBox2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(20, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(30, 25);
-            label1.TabIndex = 0;
-            label1.Text = "ID";
+            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(emailTB);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Location = new Point(327, 134);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(400, 165);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Login";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(107, 112);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(255, 31);
+            textBox2.TabIndex = 3;
+            // 
+            // emailTB
+            // 
+            emailTB.Location = new Point(107, 54);
+            emailTB.Name = "emailTB";
+            emailTB.Size = new Size(255, 31);
+            emailTB.TabIndex = 2;
             // 
             // label2
             // 
@@ -119,19 +124,14 @@
             label2.TabIndex = 1;
             label2.Text = "Password";
             // 
-            // idTB
+            // label1
             // 
-            idTB.Location = new Point(107, 54);
-            idTB.Name = "idTB";
-            idTB.Size = new Size(255, 31);
-            idTB.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(107, 112);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 31);
-            textBox2.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.Location = new Point(20, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 25);
+            label1.TabIndex = 0;
+            label1.Text = "email";
             // 
             // label3
             // 
@@ -178,7 +178,7 @@
         private RadioButton adminRB;
         private GroupBox groupBox2;
         private TextBox textBox2;
-        private TextBox idTB;
+        private TextBox emailTB;
         private Label label2;
         private Label label1;
         private Label label3;
