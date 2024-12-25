@@ -15,7 +15,8 @@ namespace MiniUnISystem
         public string Choice3 { get; set; }
         public string Choice4 { get; set; }
         public string Answer { get; set; }
+
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
+        public Exam Exam { get; set; } 
     }
 }

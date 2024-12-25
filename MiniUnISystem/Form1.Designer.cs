@@ -33,7 +33,7 @@
             studentRB = new RadioButton();
             adminRB = new RadioButton();
             groupBox2 = new GroupBox();
-            textBox2 = new TextBox();
+            passwordTB = new TextBox();
             emailTB = new TextBox();
             label2 = new Label();
             label1 = new Label();
@@ -65,6 +65,7 @@
             teacherRB.TabStop = true;
             teacherRB.Text = "Teacher";
             teacherRB.UseVisualStyleBackColor = true;
+            teacherRB.CheckedChanged += teacherRB_CheckedChanged;
             // 
             // studentRB
             // 
@@ -76,6 +77,7 @@
             studentRB.TabStop = true;
             studentRB.Text = "Student";
             studentRB.UseVisualStyleBackColor = true;
+            studentRB.CheckedChanged += studentRB_CheckedChanged;
             // 
             // adminRB
             // 
@@ -87,10 +89,11 @@
             adminRB.TabStop = true;
             adminRB.Text = "Admin";
             adminRB.UseVisualStyleBackColor = true;
+            adminRB.CheckedChanged += adminRB_CheckedChanged;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(passwordTB);
             groupBox2.Controls.Add(emailTB);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
@@ -101,12 +104,12 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Login";
             // 
-            // textBox2
+            // passwordTB
             // 
-            textBox2.Location = new Point(107, 112);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 31);
-            textBox2.TabIndex = 3;
+            passwordTB.Location = new Point(107, 112);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(255, 31);
+            passwordTB.TabIndex = 3;
             // 
             // emailTB
             // 
@@ -177,7 +180,7 @@
         private RadioButton studentRB;
         private RadioButton adminRB;
         private GroupBox groupBox2;
-        private TextBox textBox2;
+        private TextBox passwordTB;
         private TextBox emailTB;
         private Label label2;
         private Label label1;

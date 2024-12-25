@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniUnISystem
 {
-    public class Admin : User
+    public class Admin
     {
     }
 }

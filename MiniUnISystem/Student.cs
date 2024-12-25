@@ -9,7 +9,9 @@ namespace MiniUnISystem
     public class Student : User
     {
         public string Speciality { get; set; }
-        public ICollection<Course> Courses { get; set; } = new List<Course>();
 
+        public ICollection<StudentExam> StudentExams { get; set; }
+        public ICollection<StudentCourse> StudentCourses { get; set; }
     }
+
 }

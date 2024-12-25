@@ -11,9 +11,11 @@ namespace MiniUnISystem
         public int Id { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public TimeSpan StartTime { get; set; }
-        public TimeSpan EndTime { get; set; }
-        public ICollection<ExamRes> ExamResults { get; set; }
+ 
+        public int CourseId { get; set; } 
+        public Course Course { get; set; } 
+        public ICollection<StudentExam> StudentExams { get; set; }
         public ICollection<Question> Questions { get; set; }
+
     }
 }

@@ -11,10 +11,11 @@ namespace MiniUnISystem
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Level { get; set; }
-        public ICollection<Student> Students { get; set; }
-        public ICollection<Teacher> Teachers { get; set; }
-        public ICollection<Exam> Exams { get; set; }
 
+        // Navigation properties
+        public int TeacherId { get; set; } // Foreign key
+        public Teacher Teacher { get; set; } // Navigation property
+        public ICollection<StudentCourse> StudentCourses { get; set; }
+        public ICollection<Exam> Exams { get; set; }
     }
 }

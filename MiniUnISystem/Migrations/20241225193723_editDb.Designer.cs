@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniUnISystem;
 
@@ -11,9 +12,11 @@ using MiniUnISystem;
 namespace MiniUnISystem.Migrations
 {
     [DbContext(typeof(UniContext))]
-    partial class UniContextModelSnapshot : ModelSnapshot
+    [Migration("20241225193723_editDb")]
+    partial class editDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,7 +48,7 @@ namespace MiniUnISystem.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Courses", (string)null);
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("MiniUnISystem.Exam", b =>
@@ -70,7 +73,7 @@ namespace MiniUnISystem.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Exams", (string)null);
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("MiniUnISystem.Question", b =>
@@ -112,22 +115,24 @@ namespace MiniUnISystem.Migrations
 
                     b.HasIndex("ExamId");
 
-                    b.ToTable("Questions", (string)null);
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("MiniUnISystem.StudentCourse", b =>
                 {
                     b.Property<int>("StudentId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(0);
 
                     b.Property<int>("CourseId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
 
                     b.HasKey("StudentId", "CourseId");
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("StudentCourses", (string)null);
+                    b.ToTable("StudentCourses");
                 });
 
             modelBuilder.Entity("MiniUnISystem.StudentExam", b =>
@@ -153,7 +158,7 @@ namespace MiniUnISystem.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("StudentExams", (string)null);
+                    b.ToTable("StudentExams");
                 });
 
             modelBuilder.Entity("MiniUnISystem.User", b =>
@@ -187,7 +192,7 @@ namespace MiniUnISystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
 
                     b.HasDiscriminator().HasValue("User");
 
