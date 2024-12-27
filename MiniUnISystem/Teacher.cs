@@ -9,7 +9,7 @@ namespace MiniUnISystem
     public class Teacher : User
     {
         public string College { get; set; }
-        public ICollection<Course> Courses { get; set; } = new List<Course>();
+        public IList<Course> Courses { get; set; } = new List<Course>();
 
     }
 }

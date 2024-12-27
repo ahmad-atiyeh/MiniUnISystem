@@ -10,8 +10,8 @@ namespace MiniUnISystem
     {
         public string Speciality { get; set; }
 
-        public ICollection<StudentExam> StudentExams { get; set; }
-        public ICollection<StudentCourse> StudentCourses { get; set; }
+        public IList<StudentExam> StudentExams { get; set; } = new List<StudentExam>();
+        public IList<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
     }
 
 }

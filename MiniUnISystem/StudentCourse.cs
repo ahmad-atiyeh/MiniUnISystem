@@ -9,9 +9,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MiniUnISystem
 {
-
-    [PrimaryKey(nameof(StudentId), nameof(CourseId))]
-
     public class StudentCourse
     {
         public int StudentId { get; set; }
